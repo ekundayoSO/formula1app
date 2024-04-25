@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}Formula1 races in 2024!{% endblock %}
+{% block body %}
+<div class="example-wrapper">
+  <h1>F1 Races in 2024✅</h1>
+  <ul class="grid">
+    {% for data in data.MRData.RaceTable.Races %}
+      <li>
+        <a href="{{ data.url }}">{{ data.raceName }}</a><br>
+        <img src="https://source.unsplash.com/250x250?{{ data.raceName }}" />
+        <p>{{ data.Circuit.circuitName }}</p>
+        <p>{{ data.Circuit.Location.locality }}</p>
+        <p>{{ data.date }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
