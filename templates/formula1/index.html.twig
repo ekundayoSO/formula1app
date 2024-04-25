@@ -6,6 +6,7 @@
   <ul class="grid">
     {% for data in data.MRData.RaceTable.Races %}
       <li>
+       {# Extracting data from json  #}
         <a href="{{ data.url }}">{{ data.raceName }}</a><br>
         <img src="https://source.unsplash.com/250x250?{{ data.raceName }}" />
         <p>{{ data.Circuit.circuitName }}</p>
